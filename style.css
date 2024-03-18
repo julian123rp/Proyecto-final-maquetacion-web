@@ -1,0 +1,288 @@
+
+  /* font-family: "Roboto Mono", monospace; */
+  /* font-style: normal; */
+
+  /* NORMALIZACION */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*Esto mantiene el ancho y el alto a pasar de padding y border  */
+    font-family: "Roboto Mono" , monospace;
+    list-style: none; /*Quitara los puntos  e decoraciones de las listas   */
+    text-decoration: none;/* Esto quita el sup rallado en los enlaces  */  
+    color: white;  
+}
+
+body{
+    background-color: black;/* borrar cuando terminemos el fondo */
+}
+
+header{
+    position: fixed;/* Esto hace que el header quede fijo en la parte superior de la pagina web */
+    right: 0;
+    top: 0;
+    z-index: 100;/* Esto hace que el header se muestre por encima  */
+    width: 100%;
+    display: flex;/* El flex servira para que se acomoden los elementos en linea  */
+    align-items: center;/* Centra vertical mente  */
+    justify-content: space-between;/* Que los elementos se separen  */
+    padding: 15px 3%;
+    background-color: transparent;
+
+}
+
+.logo {
+    font-size: 30px;/* Es para agrander el texto */
+    font-weight: 800;/* es para el grueso la negrilla  */
+}
+
+.navlist {
+    display: flex;/* Esto sirve para que los elementos de las listas ul se pongan en linea  */
+}
+
+.navlist a {
+    margin-left: 60px ;/* Esto es para separar las palabras */
+    font-size: 15px;
+    font-weight:  600;
+    border-bottom: 2px solid transparent;/* Este es un subrayado trasparente  */
+    transition: all .5s ease 0s;/* esto es para animar todas las caracteristicas del navlist a  */
+} 
+ 
+.navlist a:hover  {
+ 
+    border-bottom : 2px solid white;/* Este es un subrayado blanco quie aparecera cuando pasemos el maus   */
+} 
+ 
+#menu-icone{
+    display:  block;    /* lo ponemos en none para que solo se vea cuando la pagina este colapsada de porfa orizontal   */
+}
+
+#menu-icone{ 
+    font-size: 35px;
+    z-index:  101;/* para que este sobre el header */
+    cursor: pointer;/* para cuando pasemos el maus se ponga la manito */
+}
+
+#menu-toggle{
+    display: none;/* nunca quiero que se vea el chekbox */
+}
+
+.menu-icon-action{
+    display: none;/* para que no se le pueda hacer click */
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;/* Es para que ocupe el minimo disponible */
+    background: linear-gradient(245.59deg, #00ffe184 0%, #4f988f84 25%, #020202 75%);/* Esto es un fondo de colo gradiente  */
+    position: relative;/* Para que sea relativo al contenedor nos permite usar left right bottom y top */
+    display: grid;/* Para que el  hero se pueda dividir  en  dos columnas    */
+    grid-template-columns: 1fr 1fr ;/* Estas son las 2 columnas  */
+    align-items: center;/* Esto e s para alinear vertical mente el hero   */
+    gap: 2rem;/* Esto es para que haya espacio de 2 rem entre las dos columnas  */
+    padding: 10%;
+}
+
+.section{
+    padding:  0 8% ;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img{
+    width: 400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all 5s linear;/* esto hace que la trancicon sea lineal */
+}
+
+.hero-img img:hover{
+    width: 450px;
+    opacity: 0.6;
+}
+
+.hero-text a{
+    display: inline-block;/* el inline block nos permitira darle un acho o un alto */
+    background-color: #3d3d3d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px; 
+    text-transform: uppercase;/* es para que las palaberas esten en mayusculas  */
+    transition: all .5s ease ;
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    transform: translateX(8px);/* sera para que se mueba para uno una direccion ya sea x, y, z,  */
+}
+
+.hero-text a.dibujos {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.dibujos i{
+    vertical-align: middle;
+    margin-right: 5px;
+    
+}
+
+.icons{
+    position: absolute;    
+    top:50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+
+}
+.icons i{
+    display: block;
+    margin: 26px 0 ;
+    font-size: 24px;
+    transition: all .5s ease;
+}
+
+.icons i:hover{
+    color:#7a7a7a;
+    transform: translateY(-5px);
+
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right:3%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+
+}
+
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+
+/* Aca aremos medioa cueris  */
+@media(max-width:992px){
+    .section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text{
+        padding-top: 0;
+    }
+
+    .hero-img{
+        text-align: center;
+    }
+
+    .hero-img img{
+        width:80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+
+
+    .icons{
+        display: none;
+    }
+}
+
+@media (max-width:768px){
+     
+    .menu-icon-action{
+        display: block;
+        
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .hero-text{
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .hero-img img{
+        margin: 0;
+    }
+
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color:#042420f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .3s ease;
+    }
+
+    .navlist a {
+        display: block;
+        margin:7px 0;
+
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul {
+        right: 0;
+    }
+}
+
+
+
+
